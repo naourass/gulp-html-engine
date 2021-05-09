@@ -1,0 +1,33 @@
+{
+  "name": "@naourass/gulp-html-engine",
+  "version": "1.0.0",
+  "description": "Extend, include and replace html files",
+  "repository": "naourass/gulp-html-engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint index.js && mocha -R spec"
+  },
+  "keywords": [
+    "gulp",
+    "html",
+    "master",
+    "extend",
+    "include",
+    "replace",
+    "templating",
+    "engine"
+  ],
+  "dependencies": {
+    "event-stream": "^3.1.7",
+    "gulp-util": "~3.0.0",
+    "node.extend": "^1.1.2",
+    "through2": "^1.1.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "vinyl": "*",
+    "should": "*",
+    "jshint": "*"
+  }
+}
