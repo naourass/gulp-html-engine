@@ -18,16 +18,16 @@
     "engine"
   ],
   "dependencies": {
-    "event-stream": "^3.1.7",
+    "event-stream": "^4.0.1",
     "gulp-util": "~3.0.0",
-    "node.extend": "^1.1.2",
-    "through2": "^1.1.1"
+    "node.extend": "^2.0.2",
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "chai": "*",
+    "jshint": "*",
     "mocha": "*",
-    "vinyl": "*",
     "should": "*",
-    "jshint": "*"
+    "vinyl": "*"
   }
 }
