@@ -1,6 +1,6 @@
 {
   "name": "@naourass/gulp-html-engine",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Extend, include and replace html files",
   "repository": "naourass/gulp-html-engine",
   "main": "index.js",
