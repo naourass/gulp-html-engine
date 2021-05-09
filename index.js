@@ -59,7 +59,7 @@ function makeFile(absolutePath, cb) {
             var file = new gUtil.File({
                 base: path.dirname(absolutePath),
                 path: absolutePath,
-                contents: new Buffer(data),
+                contents: Buffer.from(data),
             })
             cb(file)
         })
@@ -67,7 +67,7 @@ function makeFile(absolutePath, cb) {
         return new gUtil.File({
             base: path.dirname(absolutePath),
             path: absolutePath,
-            contents: new Buffer(fs.readFileSync(absolutePath)),
+            contents: Buffer.from(fs.readFileSync(absolutePath)),
         })
     }
 }
@@ -122,7 +122,7 @@ function extendFile(file, options ,afterExtend) {
 
             var newContent = newLines.join('\n')
 
-            file.contents = new Buffer(newContent)
+            file.contents = Buffer.from(newContent)
 
             return afterExtend()
 
@@ -147,7 +147,7 @@ function interpolateIncludedContent(file, options) {
             log('[include]', includeAbsolutePath)
             var includedFile = makeFile(includeAbsolutePath)
             if (include.context) {
-                includedFile.contents = new Buffer(interpolateVariables(includedFile.contents.toString(),
+                includedFile.contents = Buffer.from(interpolateVariables(includedFile.contents.toString(),
                     include.context))
             }
             interpolateIncludedContent(includedFile, options)
@@ -165,7 +165,7 @@ function interpolateIncludedContent(file, options) {
         }
     })
 
-    file.contents = new Buffer(includedLines.join('\n'))
+    file.contents = Buffer.from(includedLines.join('\n'))
 
 }
 
