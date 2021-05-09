@@ -17,6 +17,7 @@
     "templating",
     "engine"
   ],
+  "license": "MIT",
   "dependencies": {
     "event-stream": "^4.0.1",
     "gulp-util": "~3.0.0",
